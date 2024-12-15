@@ -1,0 +1,10 @@
+services:
+  l7fw-app:
+    image: lehuannhatrang/l7fw-app:latest
+    build: .
+    container_name: l7fw-app
+    environment:
+      - PORT=8080 # Default port, can be changed here or via env variables
+    ports:
+      - "3000:8080" # Maps port 3000 on the host to port 8080 inside the container
+    restart: unless-stopped
