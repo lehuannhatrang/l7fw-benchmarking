@@ -33,7 +33,7 @@ const server = http.createServer(app);
 
 // Start the server
 server.listen(PORT , () => {
-  console.log(`L7FW app listening on port ${PORT}`);
+  console.log(`L7FW HTTP Server listening on port ${PORT}`);
 });
 
 // Handling socket events for low-level connection monitoring

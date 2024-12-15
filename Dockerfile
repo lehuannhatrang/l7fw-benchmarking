@@ -14,7 +14,8 @@ RUN npm install --production
 COPY . .
 
 # Expose the port (this can still be customized during runtime)
-EXPOSE 8080
+EXPOSE 8080 8081
 
 # Keep the container running
-CMD ["tail", "-f", "/dev/null"]
+# CMD ["node", "l7fw_stream.js"]
+CMD node l7fw_stream.js & node l7fw_stream_net.js

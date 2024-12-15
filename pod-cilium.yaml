@@ -9,7 +9,7 @@ spec:
     - name: l7fw-app
       image: lehuannhatrang/l7fw-app:latest
       ports:
-        - protocol: UDP
+        - protocol: TCP
           containerPort: 8080
         - protocol: TCP
           containerPort: 8081
@@ -26,10 +26,10 @@ spec:
     - port: 8080
       targetPort: 8080 
       nodePort: 30080
-      protocol: UDP
-      name: udp-port
+      protocol: TCP
+      name: tcp-port-1
     - port: 8081
       targetPort: 8081
       nodePort: 30081
       protocol: TCP
-      name: tcp-port
+      name: tcp-port-2
